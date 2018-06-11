@@ -1,3 +1,42 @@
+# "Let's Build A Gutenberg Block" at WordCamp EU, 2018!
+
+This Github project will provide the reference files and roadmap for our workshop today. Each portion will be introduced with a short lecture followed by an exercise. The schedule is as follows:
+
+### Prerequisites:
+
+Please have the following prepared for the workshop:
+
+* Local install of WordPress
+* Up to date install of the Gutenberg plugin
+* Node version 8+, npm version 5.3+
+* A text editor such as Sublime, VSCode, or Atom
+
+### Part 0: Introductions
+
+1. Find a pair programming partner 
+2. In your pair, introduce yourself:
+  * Name
+  * Your experience with WordPress
+  * A frustrating moment in development
+
+### Part 1: What _is_ Gutenberg?
+
+1. Create a few blocks in Gutenberg. Add some options to the paragraph block using the block inspector. 
+2. View the block from the frontend and see where the styles are coming from using the Inspector.
+3. Deactivate the Gutenberg plugin.
+4. Reload the WYSIWYG editor and note the comments surrounding blocks. 
+5. Reload the frontend and note any styling differences.
+6. Reactivate Gutenberg and see blocks re-appear.
+
+### Part 2: Scaffold a block with `create-guten-block`
+
+1. Open the terminal (On Mac: Applications > Utilities > Terminal).
+2. Type `node -v` and hit Enter. 
+  * If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip to step 3.1
+2. Type `npm -v` and hit Enter. 
+  * If you get a response of `v5.3.0` or greater, proceed to step 3. Otherwise, skip to step 3.1.
+3. `cd` into the plugins directory of your local install. Run the command `npx create-guten-block wceu-2018` and watch the magic unfold!
+
 This project was bootstrapped with [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
 
 Below you will find some information on how to run scripts.
