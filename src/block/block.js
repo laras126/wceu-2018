@@ -11,7 +11,7 @@ import './editor.scss';
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { RichText } = wp.editor; // Import the RichText component
+const { RichText, AlignmentToolbar, BlockControls } = wp.editor; // Import components from wp.editor
 
 registerBlockType('cgb/block-wceu-block', {
 	title: __('WCEU Block'),
@@ -28,7 +28,12 @@ registerBlockType('cgb/block-wceu-block', {
 			type: 'array',
 			source: 'children',
 			selector: 'p'
-		}
+		},
+		// Register an "alignment" attribute to track the value set in the alignment controls.
+		alignment: {
+			type: 'string'
+		},
+		
 	},
 
 	edit: function (props) {
@@ -37,10 +42,20 @@ registerBlockType('cgb/block-wceu-block', {
 		const onChangeContent = newContent => {
 			props.setAttributes({ content: newContent });
 		};
+		
+		// A callback function to update the alignment value when it is changed.
+		const onChangeAlignment = newAlignment => {
+			props.setAttributes({ alignment: newAlignment });
+		};
 
 		return (
-			// A div wraps the block and uses the class name generated from the block.
-			<div className={props.className}>
+			<div className={props.className} style={{ textAlign: props.attributes.alignment }}>
+				<BlockControls>
+					<AlignmentToolbar
+						value={props.attributes.alignment}
+						onChange={onChangeAlignment}
+					/>
+				</BlockControls>
 				<RichText
 					onChange={onChangeContent}
 					value={props.attributes.content}
@@ -50,14 +65,15 @@ registerBlockType('cgb/block-wceu-block', {
 	},
 
 	save: function (props) {
+		
+		// In order to avoid adding inline styles to the frontend, there are a few alignment classes added to style.scss. Let's use our value from the alignment attribute to create a string that matches those classes (e.g. text-left, text-right, etc.)
+		// Note that this could be considered theme territory, but for the purposes of this workshop, it's in the plugin!
+		const alignmentClassName = props.attributes.alignment ? 'text-' + props.attributes.alignment : null;
+		
 		return (
-			// Apply the same wrapper and class name to the saved version of the block.
-			<div className={props.className}>
+			// Apply the same wrapper along with the block class name and alignment class to the saved version of the block.
+			<div className={props.className + ' ' + alignmentClassName}>
 				<p>{props.attributes.content}</p>
-				{/* 
-					This can also be done in the same fashion as the core blocks using the RichText component: 
-					<RichText.Content value={ props.attributes.content } />
-				*/}
 			</div>
 		);
 	},
