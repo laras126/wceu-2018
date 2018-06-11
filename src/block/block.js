@@ -66,13 +66,14 @@ registerBlockType('cgb/block-wceu-block', {
 
 	save: function (props) {
 		
-		// In order to avoid adding inline styles to the frontend, there are a few alignment classes added to style.scss. Let's use our value from the alignment attribute to create a string that matches those classes (e.g. text-left, text-right, etc.)
-		// Note that this could be considered theme territory, but for the purposes of this workshop, it's in the plugin!
+		// In order to avoid adding inline styles to the frontend, there are a few alignment classes added to style.scss. 
+		// Let's use our value from the alignment attribute to create a string for those classes (e.g. text-left, text-right, etc.)
+		// Note that this *could* be considered theme territory, but for the purposes of this workshop, it's in the plugin :)
 		const alignmentClassName = props.attributes.alignment ? 'text-' + props.attributes.alignment : null;
 		
 		return (
-			// Apply the same wrapper along with the block class name and alignment class to the saved version of the block.
-			<div className={props.className + ' ' + alignmentClassName}>
+			// Add the alignment class to the className attribute. The block class name is added by default, and Gutenberg will smartly adds on the alignment class to the saved version of the block.
+			<div className={alignmentClassName}>
 				<p>{props.attributes.content}</p>
 			</div>
 		);
