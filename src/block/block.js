@@ -72,7 +72,7 @@ registerBlockType('cgb/block-wceu-block', {
 		const alignmentClassName = props.attributes.alignment ? 'text-' + props.attributes.alignment : null;
 		
 		return (
-			// Add the alignment class to the className attribute. The block class name is added by default, and Gutenberg will smartly adds on the alignment class to the saved version of the block.
+			// Add the alignment class to the className attribute. The block class name is added by default, and Gutenberg smartly adds the alignment class to the saved version of the block.
 			<div className={alignmentClassName}>
 				<p>{props.attributes.content}</p>
 			</div>
