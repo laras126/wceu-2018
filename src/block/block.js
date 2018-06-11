@@ -11,7 +11,7 @@ import './editor.scss';
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { RichText, AlignmentToolbar, BlockControls } = wp.editor; // Import components from wp.editor
+const { RichText, AlignmentToolbar, BlockControls, InnerBlocks } = wp.editor; // Import components from wp.editor
 
 registerBlockType('cgb/block-wceu-block', {
 	title: __('WCEU Block'),
@@ -49,7 +49,7 @@ registerBlockType('cgb/block-wceu-block', {
 		};
 
 		return (
-			<div className={props.className} style={{ textAlign: props.attributes.alignment }}>
+			<div className={props.className}>
 				<BlockControls>
 					<AlignmentToolbar
 						value={props.attributes.alignment}
@@ -57,6 +57,7 @@ registerBlockType('cgb/block-wceu-block', {
 					/>
 				</BlockControls>
 				<RichText
+					style={{ textAlign: props.attributes.alignment }}
 					onChange={onChangeContent}
 					value={props.attributes.content}
 				/>
@@ -72,9 +73,8 @@ registerBlockType('cgb/block-wceu-block', {
 		const alignmentClassName = props.attributes.alignment ? 'text-' + props.attributes.alignment : null;
 		
 		return (
-			// Add the alignment class to the className attribute. The block class name is added by default, and Gutenberg smartly adds the alignment class to the saved version of the block.
-			<div className={alignmentClassName}>
-				<p>{props.attributes.content}</p>
+			<div>
+				<p className={alignmentClassName}>{props.attributes.content}</p>
 			</div>
 		);
 	},
