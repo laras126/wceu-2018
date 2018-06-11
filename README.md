@@ -1,72 +1,97 @@
 # "Let's Build A Gutenberg Block" at WordCamp EU, 2018!
 
-This Github project will provide the reference files and roadmap for our workshop today. Each portion will be introduced with a short lecture followed by an exercise. The schedule is as follows:
+This Github project will provide the reference files and roadmap for our workshop today. Each portion will be introduced with a short lecture followed by an exercise.
+
+### Learning Goals:
+
+- To explain how a block works
+- To read through a block’s code and envision what is happening behind the scenes
 
 ### Prerequisites:
 
 Please have the following prepared for the workshop:
 
-* Local install of WordPress
-* Up to date install of the Gutenberg plugin
+* Local install of WordPress with the Twenty Seventeen theme active
+* Current version of the Gutenberg plugin installed (v3.0.1)
 * Node version 8+, npm version 5.3+
 * A text editor such as Sublime, VSCode, or Atom
 
-### Part 0: Introductions
+### Part 0: Introductions (10:00)
 
-1. Find a pair programming partner 
-2. In your pair, introduce yourself:
+Lecture: Workshop Outline / Pair Programming 101
+
+Exercise:
+1. Introduce yourself to your partner:
   * Name
   * Your experience with WordPress
   * A frustrating moment in development
+2. Decide who will drive first
 
-### Part 1: What _is_ Gutenberg? (10 mins)
+### Part 1: What _is_ Gutenberg? (10:15)
 
-- [ ] Create a few blocks in Gutenberg (one of them should be a paragraph block). 
+Lecture: An overview of how Gutenberg works
+
+Exercise:
+- [ ] Create a new post.
+- [ ] Add a few blocks (one of them should be a paragraph block). 
   - [ ] Adjust some settings for the paragraph block in the sidebar.
-- [ ] View the block from the frontend and see where the styles are coming from using the Devtools Inspector (right click on the element, Inspect Element).
+- [ ] View the post from the frontend and use the Inspector to inspect the paragraph block.
+- [ ] Note two locations where the styles are coming from.
 - [ ] Deactivate the Gutenberg plugin.
-- [ ] Reload the WYSIWYG editor and make note of the comments surrounding blocks. 
+- [ ] Reload the WYSIWYG editor and switch to the Text view. Make note of the comments surrounding blocks. 
 - [ ] Reload the frontend and make note of any styling differences.
 - [ ] Reactivate Gutenberg and see blocks re-appear.
 
-### Part 2: Scaffold a block with `create-guten-block` (10 mins)
+### Part 2: Scaffold a block with Create Guten Block (10:30)
+
+Lecture: Ways to create a block (a.k.a. JavaScript build processes 101)
+
+Exercise (switch drivers):
 
 1. Open the terminal (On Mac: Applications > Utilities > Terminal).
-2. Type `node -v` and hit Enter. 
-  * If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip this step.
-2. Type `npm -v` and hit Enter. 
-  * If you get a response of `v5.3.0` or greater, proceed to step 3. Otherwise, skip this step.
-3. `cd` into the plugins directory of your local install. Run the command `npx create-guten-block wceu-2018` and watch as your block is created! 
+2. Type `node -v` and press Enter. If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip this step.
+3. Type `npm -v` and press Enter. If you get a response of `v5.3.0` or greater, proceed to step 3. Otherwise, skip this step.
+4. `cd` into the plugins directory of your local install. Run the command `npx create-guten-block wceu-2018` and watch as your block is created! 
 4. (Only if your node/npm versions were off) 
+5. Activate the Create Guten Block plugin 
+6. Add a new CGB block
+7. Save and view it from the frontend
 
-### Part 3: 
+### Part 3: What are all these files? (10:40)
 
+Lecture: A tour of the files
 
+Exercise (switch drivers):
 
+- Make sure you have the compiler running in the command line (`npm start`).
+- Open up blocks/block.js and read through the code comments.
+- Perform these changes to the code:
+  1. Change the name of your block, that is, the one that shows in the block selector
+  2. Change the icon of your block (❤ Dashicons)
+  3. Change the text that displays on the frontend i.e. when you “View Post”
+  4. Change the text that displays on the backend i.e. editor view
+  5. Give the frontend view a border radius of 30px
+- When you have finished, brainstorm how to make the text in the first paragrah editable.
 
+### Part 4: Finding Answers in Gutenberg's Source (10:50)
 
-This project was bootstrapped with [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
+(note: we will skip this section if running low on time!)
 
-Below you will find some information on how to run scripts.
+Exercise (switch drivers):
 
->You can find the most recent version of this guide [here](https://github.com/ahmadawais/create-guten-block).
+View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg). See if you can figure out how to make text editable text area by referencing the source of Gutenberg's core blocks. 
 
-## 👉  `npm start`
-- Use to compile and run the block in development mode.
-- Watches for any changes and reports back any errors in your code.
+1. Find the location of the source code for core blocks 
+  * Or skip to [this directory](https://github.com/WordPress/gutenberg/tree/master/core-blocks))
+2. Select a block that you know has editable text, or you can skip to one of these: 
+    * [1️⃣ easiest](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js)
+    * [2️⃣ medium](https://github.com/WordPress/gutenberg/blob/master/core-blocks/heading/index.js) 
+    * [3️⃣ hardest](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js)
+3. Identify where the editable functionality is coming from in the `edit` portion of the block
+  * Answer: [1️⃣ this line](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L69)
+4. Identify where that data is applied to the `save` markup of the block
+  * Answer: [1️⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L84) or [3⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js#L501)?
+5. Review the file from top to bottom. What other pieces of code are related to making the block editable?
+  * HINT: it's very **import**ant
 
-## 👉  `npm run build`
-- Use to build production code for your block inside `dist` folder.
-- Runs once and reports back the gzip file sizes of the produced code.
-
-## 👉  `npm run eject`
-- Use to eject your plugin out of `create-guten-block`.
-- Provides all the configurations so you can customize the project as you want.
-- It's a one-way street, `eject` and you have to maintain everything yourself.
-- You don't normally have to `eject` a project because by ejecting you lose the connection with `create-guten-block` and from there onwards you have to update and maintain all the dependencies on your own.
-
----
-
-###### Feel free to tweet and say 👋 at me [@MrAhmadAwais](https://twitter.com/mrahmadawais/)
-
-[![npm](https://img.shields.io/npm/v/create-guten-block.svg?style=flat-square)](https://www.npmjs.com/package/create-guten-block) [![npm](https://img.shields.io/npm/dt/create-guten-block.svg?style=flat-square&label=downloads)](https://www.npmjs.com/package/create-guten-block)  [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/ahmadawais/create-guten-block) [![Tweet for help](https://img.shields.io/twitter/follow/mrahmadawais.svg?style=social&label=Tweet%20@MrAhmadAwais)](https://twitter.com/mrahmadawais/) [![GitHub stars](https://img.shields.io/github/stars/ahmadawais/create-guten-block.svg?style=social&label=Stars)](https://github.com/ahmadawais/create-guten-block/stargazers) [![GitHub followers](https://img.shields.io/github/followers/ahmadawais.svg?style=social&label=Follow)](https://github.com/ahmadawais?tab=followers)
+### Part 5: Making our block editable
