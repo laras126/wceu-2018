@@ -36,7 +36,7 @@ Exercise:
 2. Add a few blocks (one of them should be a paragraph block). 
     * Adjust some settings for the paragraph block in the sidebar.
 3. View the post from the frontend and use the Inspector to inspect the paragraph block.
-4. Note two locations where the styles are coming from.
+4. Note where the styles are coming from e.g. inline? a theme stylesheet? plugin stylesheet?
 5. Deactivate the Gutenberg plugin.
 6. Reload the WYSIWYG editor and switch to the Text view. Make note of the comments surrounding blocks. 
 7. Reload the frontend and make note of any styling differences.
@@ -91,7 +91,7 @@ Exercise (switch drivers):
 4. Identify where the editable functionality is coming from in the `edit` portion of the block
     * Answer: [1️⃣ this line](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L69)
 5. Identify where that data is applied to the `save` markup of the block
-    * Answer: [1️⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L84) or [3⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js#L501)?
+    * Answer: [1️⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L84) or [3️⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js#L501)?
 6. Review the file from top to bottom. What other pieces of code are related to making the block editable?
     * HINT: it's very **import**ant
 
@@ -105,10 +105,17 @@ Debrief:
 
 Lecture: Attributes and State
 
-Exercise (switch drivers):
+Exercises (switch drivers for each):
 
-1. Make your block editable! Reference the files in this repository inside the `blocks/` directory. 
-2. 
+#### 1. Make the text editable
+In this Github repo, switch to the branch called `1-editable` and reference `src/block/block.js`. Switch to the branch in the Github interface or use [this link](https://github.com/laras126/wceu-2018/blob/1-editable/src/block/block.js) for a shortcut.
+
+#### 2. Add an image
+On the branch `2-add-image`m,reference `src/block/block.js` and changes in the `scss` files. Use [this link](https://github.com/laras126/wceu-2018/blob/2-add-image/src/block/block.js) for a shortcut.
+
+### 3. Block controls
+
+
 
 ### Part 6: Conclusion (11:20)
 
