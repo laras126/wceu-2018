@@ -16,3 +16,12 @@
   margin: 0 auto;
   max-width: 740px;
   padding: 2rem; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
