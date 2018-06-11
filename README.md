@@ -107,14 +107,18 @@ Lecture: Attributes and State
 
 Exercises (switch drivers for each):
 
-#### 1. Make the text editable
-In this Github repo, switch to the branch called `1-editable` and reference `src/block/block.js`. Switch to the branch in the Github interface or use [this link](https://github.com/laras126/wceu-2018/blob/1-editable/src/block/block.js) for a shortcut.
+The exercises are organized as branches in Github. [Start here](https://github.com/laras126/wceu-2018/blob/1-editable/src/block/block.js) for the first challenge, then change branches using the dropdown on the left below the project menu as you move to each exercise.
 
-#### 2. Add an image
-On the branch `2-add-image`m,reference `src/block/block.js` and changes in the `scss` files. Use [this link](https://github.com/laras126/wceu-2018/blob/2-add-image/src/block/block.js) for a shortcut.
+#### 1. Make the text editable.
+Reference `src/block/block.js` on the branch `1-editable`. Find the changes you need to apply to your own block.js! Do not copy/paste the entire file, type out the changes for yourself (better for learning!).
 
-### 3. Block controls
+#### 2. Add options for text alignment.
+On the branch `2-add-alignment`, again reference `src/block/block.js` as well as one of the `scss` files.
 
+#### 3. Add a nested blocks area.
+Perhaps we want to have an area for some free-form content below our first paragraph, say an image or maybe a quote. Rather than writing those blocks ourselves, we can use the `InnerBlocks` component to allow for an area of nested blocks! Switch to the branch `3-inner-blocks` and figure out how to apply that code to your own block.
+
+#### 4. Create an option for changing the background color.
 
 
 ### Part 6: Conclusion (11:20)
