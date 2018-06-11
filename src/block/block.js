@@ -51,8 +51,7 @@ registerBlockType('cgb/block-wceu-block', {
 
 	save: function (props) {
 		return (
-			// Apply the same wrapper and class name to the saved version of the block.
-			<div className={props.className}>
+			<div>
 				<p>{props.attributes.content}</p>
 				{/* 
 					This can also be done in the same fashion as the core blocks using the RichText component: 
