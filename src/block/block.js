@@ -61,6 +61,7 @@ registerBlockType('cgb/block-wceu-block', {
 					onChange={onChangeContent}
 					value={props.attributes.content}
 				/>
+				<InnerBlocks />
 			</div>
 		);
 	},
@@ -75,6 +76,7 @@ registerBlockType('cgb/block-wceu-block', {
 		return (
 			<div>
 				<p className={alignmentClassName}>{props.attributes.content}</p>
+				<InnerBlocks.Content />
 			</div>
 		);
 	},
