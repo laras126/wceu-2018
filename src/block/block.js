@@ -110,7 +110,7 @@ registerBlockType('cgb/block-wceu-block', {
 					/>
 				</BlockControls>
 				{/* Note: Use <div> instead of <header> here to help distinguish the edit and save versions of the block + follow Gutenberg's existing markup patterns */}
-				<div style={{ textAlign: props.attributes.alignment }}>
+				<div className="wceu-header" style={{ textAlign: props.attributes.alignment }}>
 					<RichText
 						onChange={onChangeContentHeading}
 						value={props.attributes.contentHeading}
@@ -140,11 +140,12 @@ registerBlockType('cgb/block-wceu-block', {
 		// Let's use our value from the alignment attribute to create a string for those classes (e.g. text-left, text-right, etc.)
 		// Note that this *could* be considered theme territory, but for the purposes of this workshop, it's in the plugin :)
 		const alignmentClassName = props.attributes.alignment ? 'text-' + props.attributes.alignment : null;
+		const headerClassName = alignmentClassName + ' wceu-header';
 		
 		return (
 			<section style={{ 'border-color': props.attributes.borderColor, 
 												'background-color': props.attributes.backgroundColor }}>
-				<header className={alignmentClassName}>
+				<header className={headerClassName}>
 					<h3>{props.attributes.contentHeading}</h3>
 					<p>{props.attributes.content}</p>
 				</header>
