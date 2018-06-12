@@ -127,7 +127,9 @@ registerBlockType('cgb/block-wceu-block', {
 						placeholder={__('Callout Intro')}
 					/>
 				</div>
-				<InnerBlocks />
+				<div className="wceu-innerblocks">			
+					<InnerBlocks />
+				</div>
 			</div>
 		);
 	},

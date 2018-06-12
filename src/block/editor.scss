@@ -5,11 +5,8 @@
  * which makes it higher in priority.
  */
 
-.wp-block-cgb-block-wceu-block  {
-  background: $green;
-  border: 0.2rem solid $black;
-  color: $black;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+// Even our InnerBlocks right/left positioning with header
+.wceu-innerblocks {
+  margin-left: -14px;
+  margin-right: -14px;
 }
