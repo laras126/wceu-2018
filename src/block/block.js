@@ -11,7 +11,7 @@ import './editor.scss';
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { RichText, AlignmentToolbar, BlockControls, InnerBlocks } = wp.editor; // Import components from wp.editor
+const { RichText, AlignmentToolbar, BlockControls, InnerBlocks, InspectorControls, getColorClass, PanelColor } = wp.editor; // Import components from wp.editor
 
 registerBlockType('cgb/block-wceu-block', {
 	title: __('WCEU Block'),
@@ -33,7 +33,10 @@ registerBlockType('cgb/block-wceu-block', {
 		alignment: {
 			type: 'string'
 		},
-		
+		// Register an attribute to track the value for the background color.
+		borderColor: {
+			type: 'string',
+		}
 	},
 
 	edit: function (props) {
@@ -48,8 +51,21 @@ registerBlockType('cgb/block-wceu-block', {
 			props.setAttributes({ alignment: newAlignment });
 		};
 
+		// Functon to update the background color when it is changed.
+		const setBorderColor = newColor => {
+			props.setAttributes({ borderColor: newColor });
+		};
+
 		return (
-			<div className={props.className}>
+			<div className={props.className} style={{ borderColor: props.attributes.borderColor }}>
+				<InspectorControls>
+					<PanelColor
+						colorValue={props.attributes.borderColor}
+						initialOpen={true}
+						title={__('Block Border Color')}
+						onChange={setBorderColor}
+					/>
+				</InspectorControls>
 				<BlockControls>
 					<AlignmentToolbar
 						value={props.attributes.alignment}
@@ -74,7 +90,7 @@ registerBlockType('cgb/block-wceu-block', {
 		const alignmentClassName = props.attributes.alignment ? 'text-' + props.attributes.alignment : null;
 		
 		return (
-			<div>
+			<div style={{ 'border-color': props.attributes.borderColor }}>
 				<p className={alignmentClassName}>{props.attributes.content}</p>
 				<InnerBlocks.Content />
 			</div>
