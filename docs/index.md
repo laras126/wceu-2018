@@ -50,11 +50,11 @@ Debrief:
 2. <label><input type="checkbox"/> <span>Type `node -v` and press Enter. If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip to step 9.</span></label>
 3. <label><input type="checkbox"/> <span>Type `npm -v` and press Enter. If you get a response of `v5.3.0` or greater, proceed to step 4. Otherwise, skip to step 9.</span></label>
 4. <label><input type="checkbox"/> <span>`cd` into the plugins directory of your local install (e.g. `cd ~/Sites/wceu-test/wp-content/plugins`)</span></label>
-5. <input type="checkbox"/> Run the command `npx create-guten-block wceu-2018` and watch as your block is created! 
-6. <input type="checkbox"/> Navigate to the plugins screen of your local install and activate your new block
-7. <input type="checkbox"/> Navigate to a post editor and add the new block
-8. <input type="checkbox"/> Save and view it from the frontend
-9. <input type="checkbox"/> Only if your node and npm versions are out of date: Join a different pair programming group with a working machine! And after the workshop, check out [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/) for updating node and npm.
+5. <label><input type="checkbox"/> <span>Run the command `npx create-guten-block wceu-2018` and watch as your block is created!</span></label> 
+6. <label><input type="checkbox"/> <span>Navigate to the plugins screen of your local install and activate your new block</span></label>
+7. <label><input type="checkbox"/> <span>Navigate to a post editor and add the new block</span></label>
+8. <label><input type="checkbox"/> <span>Save and view it from the frontend</span></label>
+9. <label><input type="checkbox"/> <span>Only if your node and npm versions are out of date: Join a different pair</span></label> programming group with a working machine! And after the workshop, check out [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/) for updating node and npm.</span></label>
 
 
 ### Part 3: What are all these files? (10 minutes)
@@ -62,7 +62,7 @@ Debrief:
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
 1. <label><input type="checkbox"/> <span>Make sure you have the compiler running in the command line (`npm start`).
-2. <input type="checkbox"/> Open up blocks/block.js and read through the code comments.</span></label>
+2. <label><input type="checkbox"/> <span>Open up blocks/block.js and read through the code comments.</span></label>
 3. Perform these changes to the code:
     1. <label><input type="checkbox"/> <span>Change the name of your block, that is, the one that shows in the block selector</span></label>
     2. <label><input type="checkbox"/> <span>Change the icon of your block (❤ [Dashicons](https://developer.wordpress.org/resource/dashicons/))</span></label>
@@ -112,31 +112,31 @@ The exercises are organized as branches in Github. Each branch's code contains a
 
 Note that I have removed most of the comments on each branch's example code for legibility. You do not have to do this, but you can!
 
-#### 1. Make the text editable (`1-editable`).
+<h3><label><input type="checkbox"/> <span>`1-editable`: Make the text editable.</span></label></h3>
 Reference `src/block/block.js` on the branch `1-editable`. 
 
-#### 2. Add options for text alignment (`2-alignment-toolbar`).
+<h3><label><input type="checkbox"/> <span>`2-alignment-toolbar`: Add options for text alignment.</span></label></span></h3>
 Again reference `src/block/block.js`, as well as one of the `scss` files.
 
-#### 3. Add a nested blocks area (`3-inner-blocks`).
+<h3><label><input type="checkbox"/> <span>`3-inner-blocks`: Add a nested blocks area.</span></label></label></h3>
 We have the ability to have nested blocks, or "inner block" areas, in Gutenberg blocks. Perhaps we want to have an area for some free-form content below our editable, say an image or maybe a quote? Rather than writing those blocks ourselves, we can use the `InnerBlocks` component to allow for an area of nested blocks! Switch to the branch `3-inner-blocks` and figure out how to apply that code to your own block.
 
-#### 4. Create an option for changing the border color (`4-border-color-control`).
+<h3><label><input type="checkbox"/> <span>`4-border-color-control`: Create an option for changing the border color.</span></label></h3>
 For general block options, we can use the Inspector Controls component. This is the settings area that shows up in the sidebar, like that of the paragraph block. Switch to branch `4-border-color-control` to apply the functionality to your own block to modify the block's border color.
 
-#### 5. Create an option for changing the background color (`5-background-color-control`).
+<h3><label><input type="checkbox"/> <span>`5-background-color-control`: Create an option for changing the background color.</span></label></h3>
 Let's use the same strategy to create an option for changing the block's background color, and employ the contrast checker component to make sure our colors choices are readable.
 
-#### 6. Improvements to #1 (`6-editable-improvements`)
+<h3><label><input type="checkbox"/> <span>`6-editable-improvements-and-heading`: Improvements to our editable text, and add a heading.</span></label></h3>
 As I was creating this exercise, I realized the initial `p` element we created would be better as a heading element. Then, we could use this block as a callout style block with a heading. We can also utilize the focus states Gutenebrg provides to make the editing experience more smooth. 
 
-#### 7. Improve block semantics (`7-semantic-improvements`)
+<h3><label><input type="checkbox"/> <span>`7-semantic-improvements`: Improve block semantics</span></label></h3>
 This is shaping up to be a pretty useful callout or section block! Let's make the markup in our save function a bit more semantic.
 
-#### 8. Improve block style (`8-style-improvements`)
+<h3><label><input type="checkbox"/> <span>`8-style-improvements`: Improve block style</span></label></h3>
 Clean up the edit and style CSS (rather, Sass) to have less harsh initial colors, and apply a border to the header. Apply some CSS organizational practices and tweak the display of the edit view.
 
-I think we have a pretty useful block! Whether or not you made it this far in the workshop, this Github project will be online for you to test outlater. And, if you go beyond what I've done, feel free to submit a PR and I'll take a look!
+And now...I think we have a pretty useful block! Whether or not you made it this far in the workshop, this Github project will be online for you to test at any time you like. And, if you go beyond what I've done, feel free to submit a PR and I'll take a look!
 
 ### Part 6: Conclusion (11:20)
 
