@@ -109,22 +109,24 @@ registerBlockType('cgb/block-wceu-block', {
 						onChange={onChangeAlignment}
 					/>
 				</BlockControls>
-				<RichText
-					onChange={onChangeContentHeading}
-					value={props.attributes.contentHeading}
-					focus={props.focus}
-					onFocus={props.setFocus}
-					placeholder={__('Callout Title')}
-					tagName='h3'
-				/>
-				<RichText
-					style={{ textAlign: props.attributes.alignment }}
-					onChange={onChangeContent}
-					value={props.attributes.content}
-					focus={props.focus}
-					onFocus={props.setFocus}
-					placeholder={__('Callout Intro')}
-				/>
+				{/* Note: Use <div> instead of <header> here to help distinguish the edit and save versions of the block + follow Gutenberg's existing markup patterns */}
+				<div style={{ textAlign: props.attributes.alignment }}>
+					<RichText
+						onChange={onChangeContentHeading}
+						value={props.attributes.contentHeading}
+						focus={props.focus}
+						onFocus={props.setFocus}
+						placeholder={__('Callout Title')}
+						tagName='h3'
+					/>
+					<RichText
+						onChange={onChangeContent}
+						value={props.attributes.content}
+						focus={props.focus}
+						onFocus={props.setFocus}
+						placeholder={__('Callout Intro')}
+					/>
+				</div>
 				<InnerBlocks />
 			</div>
 		);
@@ -138,12 +140,14 @@ registerBlockType('cgb/block-wceu-block', {
 		const alignmentClassName = props.attributes.alignment ? 'text-' + props.attributes.alignment : null;
 		
 		return (
-			<div style={{ 'border-color': props.attributes.borderColor, 
-										'background-color': props.attributes.backgroundColor }}>
-				<h3 className={alignmentClassName}>{props.attributes.contentHeading}</h3>
-				<p className={alignmentClassName}>{props.attributes.content}</p>
+			<section style={{ 'border-color': props.attributes.borderColor, 
+												'background-color': props.attributes.backgroundColor }}>
+				<header className={alignmentClassName}>
+					<h3>{props.attributes.contentHeading}</h3>
+					<p>{props.attributes.content}</p>
+				</header>
 				<InnerBlocks.Content />
-			</div>
+			</section>
 		);
 	},
 });
