@@ -18,20 +18,14 @@ Please have the following prepared for the workshop:
 
 ### Part 0: Introductions (10:00 - 10:10)
 
-Lecture: Workshop Outline / Pair Programming 101
-
-Exercise:
 1. Introduce yourself to your partner:
-    [ ] Name
-    [ ] Your experience with WordPress
-    [ ] A frustrating moment in development
+    * Name
+    * Your experience with WordPress
+    * A frustrating moment in development
 2. Decide who will drive first
 
 ### Part 1: What _is_ Gutenberg? (10:15 - 10:25)
 
-Lecture: An overview of how Gutenberg works
-
-Exercise:
 1. Create a new post.
 2. Add a few blocks (one of them should be a paragraph block). 
     * Adjust some settings for the paragraph block in the sidebar.
@@ -42,11 +36,13 @@ Exercise:
 7. Reload the frontend and make note of any styling differences.
 8. Activate Gutenberg plugin and see blocks re-appear.
 
+Debrief:
+
+* What conclusions can you draw about how Gutenberg works?
+
 ### Part 2: Scaffold a block with Create Guten Block (10:30 - 10:40)
 
-Lecture: Ways to create a block (a.k.a. JavaScript build processes 101)
-
-Exercise (switch drivers):
+Switch drivers!
 
 1. Open the terminal (On Mac: Applications > Utilities > Terminal).
 2. Type `node -v` and press Enter. If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip to step 9.
@@ -60,19 +56,18 @@ Exercise (switch drivers):
 
 
 ### Part 3: What are all these files? (10:40 - 10:50)
-Lecture: A tour of these files
 
-Exercise (switch drivers):
+Switch drivers!
 
-1. Make sure you have the compiler running in the command line (`npm start`).
-2. Open up blocks/block.js and read through the code comments.
+1. <input type="checkbox"/> Make sure you have the compiler running in the command line (`npm start`).
+2. <input type="checkbox"/> Open up blocks/block.js and read through the code comments.
 3. Perform these changes to the code:
-    1. Change the name of your block, that is, the one that shows in the block selector
-    2. Change the icon of your block (❤ Dashicons)
-    3. Change the text that displays on the frontend i.e. when you “View Post”
-    4. Change the text that displays on the backend i.e. editor view
-    5. Give the edit view a border of 10px solid yellow
-    6. Give the frontend view a border radius of 30px
+    1. <input type="checkbox"/> Change the name of your block, that is, the one that shows in the block selector
+    2. <input type="checkbox"/> Change the icon of your block (❤ [Dashicons](https://developer.wordpress.org/resource/dashicons/))
+    3. <input type="checkbox"/> Change the text that displays on the frontend i.e. when you “View Post”
+    4. <input type="checkbox"/> Change the text that displays on the backend i.e. editor view
+    5. <input type="checkbox"/> Give the edit view a border of 10px solid yellow
+    6. <input type="checkbox"/> Give the frontend view a border radius of 30px
 4. To see changes, remember to save and reload the editor.
 
 If you finish early, brainstorm how to make the text in the first paragrah editable.
@@ -85,18 +80,18 @@ Debrief:
 
 Exercise (switch drivers):
 
-1. View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).
-2. Find the location of the source code for core blocks 
-    * Or skip to [this directory](https://github.com/WordPress/gutenberg/tree/master/core-blocks))
-3. Select a block that you know has editable text, or you can skip to one of these: 
-    * [1️⃣ easiest](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js)
-    * [2️⃣ medium](https://github.com/WordPress/gutenberg/blob/master/core-blocks/heading/index.js) 
-    * [3️⃣ hardest](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js)
-4. Identify where the editable functionality is coming from in the `edit` portion of the block
-    * Answer: [1️⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L69)
-5. Identify where that data is applied to the `save` markup of the block
-    * Answer: [1️⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L84) or [3️⃣ here](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js#L501)?
-6. Review the file from top to bottom. What other pieces of code are related to making the block editable?
+1. <input type="checkbox"/> View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).
+2. <input type="checkbox"/> Find the location of the source code for core blocks 
+    * Answer: [this directory](https://github.com/WordPress/gutenberg/tree/master/core-blocks))
+3. <input type="checkbox"/> Select a block that you know has editable text, or you can skip to one of these: 
+    * [Pre block (easiest)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js)
+    * [Heading block (medium)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/heading/index.js) 
+    * [Paragraph block (hardest)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js)
+4. <input type="checkbox"/> Identify where the editable functionality is coming from in the `edit` portion of the block
+    * Answer: [Pre block](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L69)
+5. <input type="checkbox"/> Identify where that data is applied to the `save` markup of the block
+    * Answer: [Pre block](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L84), [Paragraph](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js#L501)?
+6. <input type="checkbox"/> Review the file from top to bottom. What other pieces of code are related to making the block editable?
     * HINT: it's very **import**ant
 
 Debrief:
