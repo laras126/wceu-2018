@@ -15,21 +15,24 @@ h3 {
 
 li {
   margin-bottom: 0.25rem;
+}
+
+input[type=checkbox] { 
   
-  ol & {
+  & + span {
     &:hover {
       background-color: whitesmoke; 
       cursor: pointer;
     }
-  
+
     &:active {
       background-color: #eeeeee; 
     }
   }
-}
 
-input[type=checkbox]:checked + span {
-  font-style: italic;
-  text-decoration: line-through;
-  color: #888;
+  &:checked + span {
+    font-style: italic;
+    text-decoration: line-through;
+    color: #888;
+  }
 }

@@ -18,11 +18,11 @@ Please have the following prepared for the workshop:
 
 ### Part 0: Introductions
 
-1. Introduce yourself to your partner:
+1. <label><input type="checkbox"/> <span>Introduce yourselves to each other:</span></label>
     * Name
     * Your experience with WordPress
     * A frustrating moment in development
-2. Decide who will drive first
+2. <label><input type="checkbox"/> <span>Decide who will drive first</span></label>
 
 ### Part 1: What _is_ Gutenberg? (Optional)
 
@@ -44,7 +44,7 @@ Debrief:
 
 ### Part 2: Scaffold a block with Create Guten Block (10 minutes)
 
-<input type="checkbox"/> Switch drivers!
+<label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
 1. <label><input type="checkbox"/> <span>Open the terminal (On Mac: Applications > Utilities > Terminal).</span></label>
 2. <label><input type="checkbox"/> <span>Type `node -v` and press Enter. If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip to step 9.</span></label>
@@ -54,25 +54,23 @@ Debrief:
 6. <input type="checkbox"/> Navigate to the plugins screen of your local install and activate your new block
 7. <input type="checkbox"/> Navigate to a post editor and add the new block
 8. <input type="checkbox"/> Save and view it from the frontend
-9. <input type="checkbox"/> Only if your node and npm versions are out of date: Join a different pair programming group with a working machine! Since we are limited on time, you'll get the most out of the workshop if you skip this step for now. Later, reference [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/) for updating node and npm.
+9. <input type="checkbox"/> Only if your node and npm versions are out of date: Join a different pair programming group with a working machine! And after the workshop, check out [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/) for updating node and npm.
 
 
 ### Part 3: What are all these files? (10 minutes)
 
-<input type="checkbox"/> Switch drivers!
+<label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
-1. <input type="checkbox"/> Make sure you have the compiler running in the command line (`npm start`).
-2. <input type="checkbox"/> Open up blocks/block.js and read through the code comments.
+1. <label><input type="checkbox"/> <span>Make sure you have the compiler running in the command line (`npm start`).
+2. <input type="checkbox"/> Open up blocks/block.js and read through the code comments.</span></label>
 3. Perform these changes to the code:
-    1. <input type="checkbox"/> Change the name of your block, that is, the one that shows in the block selector
-    2. <input type="checkbox"/> Change the icon of your block (❤ [Dashicons](https://developer.wordpress.org/resource/dashicons/))
-    3. <input type="checkbox"/> Change the text that displays on the frontend i.e. when you “View Post”
-    4. <input type="checkbox"/> Change the text that displays on the backend i.e. editor view
-    5. <input type="checkbox"/> Give the edit view a border of 10px solid yellow
-    6. <input type="checkbox"/> Give the frontend view a border radius of 30px
-4. To see changes, remember to save and reload the editor.
-
-If you finish early, brainstorm how to make the text in the first paragrah editable.
+    1. <label><input type="checkbox"/> <span>Change the name of your block, that is, the one that shows in the block selector</span></label>
+    2. <label><input type="checkbox"/> <span>Change the icon of your block (❤ [Dashicons](https://developer.wordpress.org/resource/dashicons/))</span></label>
+    3. <label><input type="checkbox"/> <span>Change the text that displays on the frontend i.e. when you “View Post”</span></label>
+    4. <label><input type="checkbox"/> <span>Change the text that displays on the backend i.e. editor view</span></label>
+    5. <label><input type="checkbox"/> <span>Give the `edit` view a border of `10px solid skyblue`</span></label>
+    6. <label><input type="checkbox"/> <span>Give the frontend view a border radius of 30px</span></label>
+4. To see changes, remember to save and reload the editor!
 
 Debrief:
 
@@ -82,20 +80,20 @@ Debrief:
 
 ### Part 4: Finding Answers in Gutenberg's Source (10 minutes)
 
-<input type="checkbox"/> Switch drivers!
+<label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
-1. <input type="checkbox"/> View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).
-2. <input type="checkbox"/> Find the location of the source code for core blocks 
+1. <label><input type="checkbox"/> <span>View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).</span></label>
+2. <label><input type="checkbox"/> <span>Find the location of the source code for core blocks</span></label>
     * Answer: [this directory](https://github.com/WordPress/gutenberg/tree/master/core-blocks)
-3. <input type="checkbox"/> Select a block that you know has editable text, or you can skip to one of these: 
+3. <label><input type="checkbox"/> <span>Navigate to `index.js` of a block that you know has editable text, or choose one of these:</span></label>
     * [Pre block (easiest)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js)
     * [Heading block (medium)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/heading/index.js) 
     * [Paragraph block (hardest)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js)
-4. <input type="checkbox"/> Identify where the editable functionality is coming from in the `edit` portion of the block
+4. <label><input type="checkbox"/> <span>Identify where the editable functionality is coming from in the `edit` portion of the block</span></label>
     * Answer: [Pre block](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L69)
-5. <input type="checkbox"/> Identify where that data is applied to the `save` markup of the block
-    * Answer: [Pre block](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L84), [Paragraph](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js#L501)?
-6. <input type="checkbox"/> Review the file from top to bottom. What other pieces of code are related to making the block editable?
+5. <label><input type="checkbox"/> <span>Identify where that data is applied to the `save` markup of the block</span></label>
+    * Answer: [Pre block](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L84), [Paragraph](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js#L501)
+6. <label><input type="checkbox"/> <span>Review the file from top to bottom. Find another piece of code that is essential for making the block editable.</span></label>
     * HINT: it's very **import**ant
 
 Debrief:
@@ -104,13 +102,13 @@ Debrief:
 * What was unexpected?
 * What do you have questions about?
 
-### Part 5: Making our block editable (11:00-end)
+### Part 5: Building the Block
 
-Lecture: Attributes and State
+The exercises are organized as branches in Github. Each branch's code contains an implementation of the feature, and your task is to figure out which changes you need to apply to your own block from the code in the branch. 
 
-Exercises (switch drivers for each):
+**[Start here](https://github.com/laras126/wceu-2018/blob/1-editable/src/block/block.js)** for the first challenge, then change branches using the dropdown on the left below the project menu as you move to each exercise. It looks like this:
 
-The exercises are organized as branches in Github. [Start here](https://github.com/laras126/wceu-2018/blob/1-editable/src/block/block.js) for the first challenge, then change branches using the dropdown on the left below the project menu as you move to each exercise. The branch's code contains an implementation of the feature. Figure out which changes you need to apply to your own block from the code on the branch. 
+![Image of where to change branches in the Github UI](images/Github-branches.png)
 
 Note that I have removed most of the comments on each branch's example code for legibility. You do not have to do this, but you can!
 
