@@ -16,7 +16,7 @@ Please have the following prepared for the workshop:
 * Node version 8+, npm version 5.3+
 * A text editor such as Sublime, VSCode, or Atom
 
-### Part 0: Introductions (10:00 - 10:10)
+### Part 0: Introductions
 
 1. Introduce yourself to your partner:
     * Name
@@ -26,19 +26,19 @@ Please have the following prepared for the workshop:
 
 ### Part 1: What _is_ Gutenberg? (Optional)
 
-1. <input type="checkbox"/> Create a new post.
-2. <input type="checkbox"/> Add a few blocks (one of them should be a paragraph block). 
-    * <input type="checkbox"/> Adjust some settings for the paragraph block in the sidebar.
-3. <input type="checkbox"/> View the post from the frontend and use the Inspector to inspect the paragraph block.
-4. <input type="checkbox"/> Note where the styles are coming from e.g. inline? a theme stylesheet? plugin stylesheet?
-5. <input type="checkbox"/> Deactivate the Gutenberg plugin.
-6. <input type="checkbox"/> Reload the WYSIWYG editor and switch to the Text view. Make note of the comments surrounding blocks. 
-7. <input type="checkbox"/> Reload the frontend and make note of any styling differences.
-8. <input type="checkbox"/> Activate Gutenberg plugin and see blocks re-appear.
+1. <label><input type="checkbox"/> <span>Create a new post.</span></label>
+2. <label><input type="checkbox"/> <span>Add a few blocks (one of them should be a paragraph block).</span></label> 
+    * <label><input type="checkbox"/> <span>Adjust some settings for the paragraph block in the sidebar.</span></label>
+3. <label><input type="checkbox"/> <span>View the post from the frontend and use the Inspector to inspect the paragraph block.</span></label>
+4. <label><input type="checkbox"/> <span>Note where the styles are coming from e.g. inline? a theme stylesheet? plugin stylesheet?</span></label>
+5. <label><input type="checkbox"/> <span>Deactivate the Gutenberg plugin.</span></label>
+6. <label><input type="checkbox"/> <span>Reload the WYSIWYG editor and switch to the Text view. Make note of the comments surrounding blocks.</span></label>
+7. <label><input type="checkbox"/> <span>Reload the frontend and make note of any styling differences.</span></label>
+8. <label><input type="checkbox"/> <span>Activate Gutenberg plugin and see blocks re-appear.</span></label>
 
 Debrief:
 
-* What conclusions can you draw about how Gutenberg works?
+* What conclusions can you draw about how Gutenberg works? 
 * Where are the HTML comments coming from?
 * How does Gutenberg apply styles to the frontend?
 
