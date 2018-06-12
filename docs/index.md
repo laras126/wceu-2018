@@ -86,7 +86,7 @@ Debrief:
 
 1. <input type="checkbox"/> View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).
 2. <input type="checkbox"/> Find the location of the source code for core blocks 
-    * Answer: [this directory](https://github.com/WordPress/gutenberg/tree/master/core-blocks))
+    * Answer: [this directory](https://github.com/WordPress/gutenberg/tree/master/core-blocks)
 3. <input type="checkbox"/> Select a block that you know has editable text, or you can skip to one of these: 
     * [Pre block (easiest)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js)
     * [Heading block (medium)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/heading/index.js) 

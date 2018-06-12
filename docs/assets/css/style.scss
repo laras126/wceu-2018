@@ -1,8 +1,24 @@
 ---
 ---
+$green: #159957;
 
 @import "{{ site.theme }}";
 
+body {
+  color: #333;
+}
+
+h3 {
+  padding-top: 1rem;
+  border-top: 1px solid $green;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
 input[type=checkbox]:checked + span {
   font-style: italic;
+  text-decoration: line-through;
+  color: #888;
 }
