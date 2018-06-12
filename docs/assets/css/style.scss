@@ -3,3 +3,6 @@
 
 @import "{{ site.theme }}";
 
+input[checked="checked"] + span {
+  font-style: italic;
+}

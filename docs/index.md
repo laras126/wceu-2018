@@ -24,40 +24,42 @@ Please have the following prepared for the workshop:
     * A frustrating moment in development
 2. Decide who will drive first
 
-### Part 1: What _is_ Gutenberg? (10:15 - 10:25)
+### Part 1: What _is_ Gutenberg? (Optional)
 
-1. Create a new post.
-2. Add a few blocks (one of them should be a paragraph block). 
-    * Adjust some settings for the paragraph block in the sidebar.
-3. View the post from the frontend and use the Inspector to inspect the paragraph block.
-4. Note where the styles are coming from e.g. inline? a theme stylesheet? plugin stylesheet?
-5. Deactivate the Gutenberg plugin.
-6. Reload the WYSIWYG editor and switch to the Text view. Make note of the comments surrounding blocks. 
-7. Reload the frontend and make note of any styling differences.
-8. Activate Gutenberg plugin and see blocks re-appear.
+1. <input type="checkbox"/> Create a new post.
+2. <input type="checkbox"/> Add a few blocks (one of them should be a paragraph block). 
+    * <input type="checkbox"/> Adjust some settings for the paragraph block in the sidebar.
+3. <input type="checkbox"/> View the post from the frontend and use the Inspector to inspect the paragraph block.
+4. <input type="checkbox"/> Note where the styles are coming from e.g. inline? a theme stylesheet? plugin stylesheet?
+5. <input type="checkbox"/> Deactivate the Gutenberg plugin.
+6. <input type="checkbox"/> Reload the WYSIWYG editor and switch to the Text view. Make note of the comments surrounding blocks. 
+7. <input type="checkbox"/> Reload the frontend and make note of any styling differences.
+8. <input type="checkbox"/> Activate Gutenberg plugin and see blocks re-appear.
 
 Debrief:
 
 * What conclusions can you draw about how Gutenberg works?
+* Where are the HTML comments coming from?
+* How does Gutenberg apply styles to the frontend?
 
-### Part 2: Scaffold a block with Create Guten Block (10:30 - 10:40)
+### Part 2: Scaffold a block with Create Guten Block (10 minutes)
 
-Switch drivers!
+<input type="checkbox"/> Switch drivers!
 
-1. Open the terminal (On Mac: Applications > Utilities > Terminal).
-2. Type `node -v` and press Enter. If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip to step 9.
-3. Type `npm -v` and press Enter. If you get a response of `v5.3.0` or greater, proceed to step 4. Otherwise, skip to step 9.
-4. `cd` into the plugins directory of your local install (e.g. `cd ~/Sites/wceu-test/wp-content/plugins`)
-5. Run the command `npx create-guten-block wceu-2018` and watch as your block is created! 
-6. Navigate to the plugins screen of your local install and activate your new block
-7. Navigate to a post editor and add the new block
-8. Save and view it from the frontend
-9. Only if your node and npm versions are out of date: Join a different pair programming group with a working machine! Since we are limited on time, you'll get the most out of the workshop if you skip this step for now. Later, reference [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/) for updating node and npm.
+1. <label><input type="checkbox"/> <span>Open the terminal (On Mac: Applications > Utilities > Terminal).</span></label>
+2. <label><input type="checkbox"/> <span>Type `node -v` and press Enter. If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip to step 9.</span></label>
+3. <label><input type="checkbox"/> <span>Type `npm -v` and press Enter. If you get a response of `v5.3.0` or greater, proceed to step 4. Otherwise, skip to step 9.</span></label>
+4. <label><input type="checkbox"/> <span>`cd` into the plugins directory of your local install (e.g. `cd ~/Sites/wceu-test/wp-content/plugins`)</span></label>
+5. <input type="checkbox"/> Run the command `npx create-guten-block wceu-2018` and watch as your block is created! 
+6. <input type="checkbox"/> Navigate to the plugins screen of your local install and activate your new block
+7. <input type="checkbox"/> Navigate to a post editor and add the new block
+8. <input type="checkbox"/> Save and view it from the frontend
+9. <input type="checkbox"/> Only if your node and npm versions are out of date: Join a different pair programming group with a working machine! Since we are limited on time, you'll get the most out of the workshop if you skip this step for now. Later, reference [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/) for updating node and npm.
 
 
-### Part 3: What are all these files? (10:40 - 10:50)
+### Part 3: What are all these files? (10 minutes)
 
-Switch drivers!
+<input type="checkbox"/> Switch drivers!
 
 1. <input type="checkbox"/> Make sure you have the compiler running in the command line (`npm start`).
 2. <input type="checkbox"/> Open up blocks/block.js and read through the code comments.
@@ -74,11 +76,13 @@ If you finish early, brainstorm how to make the text in the first paragrah edita
 
 Debrief:
 
-1. What did you learn about how a block is structured?
+* What did you learn about how a block is structured?
+* What is the difference between the `edit` and `save` view of a block?
+* What does the function `registerBlockType` do? (don't think too much about this one...)
 
-### Part 4: Finding Answers in Gutenberg's Source (10:50)
+### Part 4: Finding Answers in Gutenberg's Source (10 minutes)
 
-Exercise (switch drivers):
+<input type="checkbox"/> Switch drivers!
 
 1. <input type="checkbox"/> View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).
 2. <input type="checkbox"/> Find the location of the source code for core blocks 
@@ -96,9 +100,9 @@ Exercise (switch drivers):
 
 Debrief:
 
-1. What looked familiar?
-2. What was unexpected?
-3. What do you have questions about?
+* What looked familiar?
+* What was unexpected?
+* What do you have questions about?
 
 ### Part 5: Making our block editable (11:00-end)
 
