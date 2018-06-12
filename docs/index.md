@@ -22,9 +22,9 @@ Lecture: Workshop Outline / Pair Programming 101
 
 Exercise:
 1. Introduce yourself to your partner:
-    * Name
-    * Your experience with WordPress
-    * A frustrating moment in development
+    [ ] Name
+    [ ] Your experience with WordPress
+    [ ] A frustrating moment in development
 2. Decide who will drive first
 
 ### Part 1: What _is_ Gutenberg? (10:15 - 10:25)
