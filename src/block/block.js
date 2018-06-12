@@ -22,7 +22,7 @@ const {
 	ContrastChecker } = wp.editor; // Import components from wp.editor
 
 registerBlockType('cgb/block-wceu-block', {
-	title: __('WCEU Block'),
+	title: __('WCEU Callout Block'),
 	icon: 'carrot',
 	category: 'common',
 	keywords: [
@@ -31,6 +31,12 @@ registerBlockType('cgb/block-wceu-block', {
 		__('create-guten-block'),
 	],
 	attributes: {
+		// The "contentHeading" attribute will track the title of our section.
+		contentHeading: {
+			type: 'array',
+			source: 'children',
+			selector: 'h3'
+		},
 		// Register a "content" attribute so we can track its state.
 		content: {
 			type: 'array',
@@ -51,6 +57,11 @@ registerBlockType('cgb/block-wceu-block', {
 	},
 
 	edit: function (props) {
+
+		// A callback function to update the block attributes.
+		const onChangeContentHeading = newContentHeading => {
+			props.setAttributes({ contentHeading: newContentHeading });
+		};
 
 		// A callback function to update the block attributes.
 		const onChangeContent = newContent => {
@@ -99,9 +110,20 @@ registerBlockType('cgb/block-wceu-block', {
 					/>
 				</BlockControls>
 				<RichText
+					onChange={onChangeContentHeading}
+					value={props.attributes.contentHeading}
+					focus={props.focus}
+					onFocus={props.setFocus}
+					placeholder={__('Callout Title')}
+					tagName='h3'
+				/>
+				<RichText
 					style={{ textAlign: props.attributes.alignment }}
 					onChange={onChangeContent}
 					value={props.attributes.content}
+					focus={props.focus}
+					onFocus={props.setFocus}
+					placeholder={__('Callout Intro')}
 				/>
 				<InnerBlocks />
 			</div>
@@ -118,6 +140,7 @@ registerBlockType('cgb/block-wceu-block', {
 		return (
 			<div style={{ 'border-color': props.attributes.borderColor, 
 										'background-color': props.attributes.backgroundColor }}>
+				<h3 className={alignmentClassName}>{props.attributes.contentHeading}</h3>
 				<p className={alignmentClassName}>{props.attributes.content}</p>
 				<InnerBlocks.Content />
 			</div>
