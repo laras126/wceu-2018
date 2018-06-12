@@ -24,7 +24,7 @@ Please have the following prepared for the workshop:
     * A frustrating moment in development
 2. <label><input type="checkbox"/> <span>Decide who will drive first</span></label>
 
-### Part 1: What _is_ Gutenberg? (Optional)
+### Part 1: Orientation (5-7 minutes)
 
 1. <label><input type="checkbox"/> <span>Create a new post.</span></label>
 2. <label><input type="checkbox"/> <span>Add a few blocks (one of them should be a paragraph block).</span></label> 
@@ -54,10 +54,10 @@ Debrief:
 6. <label><input type="checkbox"/> <span>Navigate to the plugins screen of your local install and activate your new block</span></label>
 7. <label><input type="checkbox"/> <span>Navigate to a post editor and add the new block</span></label>
 8. <label><input type="checkbox"/> <span>Save and view it from the frontend</span></label>
-9. <label><input type="checkbox"/> <span>Only if your node and npm versions are out of date: Join a different pair</span></label> programming group with a working machine! And after the workshop, check out [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/) for updating node and npm.</span></label>
+9. If your node and npm versions are out of date: Join a different pair programming group with a working machine! Or, if you are comfortable doing so, try updating node/npm via [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/). You can also raise your hand for help!
 
 
-### Part 3: What are all these files? (10 minutes)
+### Part 3: Our block files in `src/block` (10 minutes)
 
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
@@ -71,6 +71,7 @@ Debrief:
     5. <label><input type="checkbox"/> <span>Give the `edit` view a border of `10px solid skyblue`</span></label>
     6. <label><input type="checkbox"/> <span>Give the frontend view a border radius of 30px</span></label>
 4. To see changes, remember to save and reload the editor!
+5. <label><input type="checkbox"/> <span>Bonus: Find how our JavaScript is being enqueued</span></label>
 
 Debrief:
 
@@ -102,7 +103,7 @@ Debrief:
 * What was unexpected?
 * What do you have questions about?
 
-### Part 5: Building the Block
+### Part 5: Building the Block (remainder of time)
 
 The exercises are organized as branches in Github. Each branch's code contains an implementation of the feature, and your task is to figure out which changes you need to apply to your own block from the code in the branch. 
 
@@ -110,7 +111,11 @@ The exercises are organized as branches in Github. Each branch's code contains a
 
 ![Image of where to change branches in the Github UI](images/Github-branches.png)
 
-Note that I have removed most of the comments on each branch's example code for legibility. You do not have to do this, but you can!
+Note that I have removed most of the comments on each branch's example code for legibility. You do not have to do this, but you can! Also, note that you will see a lot of this:
+
+![Image of an error on the block](images/block-error.png)
+
+Refer to [Debugging Techniques](#debugging-techniques) for more information!
 
 <h3><label><input type="checkbox"/> <span>`1-editable`: Make the text editable.</span></label></h3>
 Reference `src/block/block.js` on the branch `1-editable`. 
@@ -138,7 +143,7 @@ Clean up the edit and style CSS (rather, Sass) to have less harsh initial colors
 
 And now...I think we have a pretty useful block! Whether or not you made it this far in the workshop, this Github project will be online for you to test at any time you like. And, if you go beyond what I've done, feel free to submit a PR and I'll take a look!
 
-### Part 6: Conclusion (11:20)
+### Part 6: Q&A + Conclusion (last 15 mins)
 
 Individually, and in your own words, write 1-3 paragraphs explaining the core components of a block.
 
