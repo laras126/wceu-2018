@@ -15,13 +15,16 @@ h3 {
 
 li {
   margin-bottom: 0.25rem;
-
-  &:hover {
-    background-color: whitesmoke; 
-  }
-
-  &:active {
-    background-color: #dddddd; 
+  
+  ol & {
+    &:hover {
+      background-color: whitesmoke; 
+      cursor: pointer;
+    }
+  
+    &:active {
+      background-color: #eeeeee; 
+    }
   }
 }
 
