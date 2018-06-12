@@ -6,9 +6,15 @@
 
 .wp-block-cgb-block-wceu-block  {
   background: whitesmoke;
-  border: 0.2rem solid $black;
+  border: 0.2rem solid $border-default;
   color: $black;
   padding: 2rem;
+  
+  // Using the direct child selector (>) ensures this style will only target the header directly within the block, that way, we don't affect any headers that may come up within the InnerBlocks.
+  > header {
+    border-bottom: 1px solid $border-default;
+    margin-bottom: 1.5rem;
+  }
 }
 
 // Text alignment utility styles
