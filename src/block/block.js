@@ -22,8 +22,8 @@ const {
 	ContrastChecker } = wp.editor; // Import components from wp.editor
 
 registerBlockType('cgb/block-wceu-block', {
-	title: __('WCEU Callout Block'),
-	icon: 'carrot',
+	title: __('Alert Block'),
+	icon: 'megaphone',
 	category: 'common',
 	keywords: [
 		__('wceu-block — CGB Block'),
