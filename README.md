@@ -115,8 +115,6 @@ The exercises are organized as branches in Github. [Start here](https://github.c
 
 Note that I have removed most of the comments on each branch's example code for legibility. You do not have to do this, but you can!
 
-image of dropdown
-
 #### 1. Make the text editable (`1-editable`).
 Reference `src/block/block.js` on the branch `1-editable`. 
 
@@ -135,10 +133,10 @@ Let's use the same strategy to create an option for changing the block's backgro
 #### 6. Improvements to #1 (`6-editable-improvements`)
 As I was creating this exercise, I realized the initial `p` element we created would be better as a heading element. Then, we could use this block as a callout style block with a heading. We can also utilize the focus states Gutenebrg provides to make the editing experience more smooth. 
 
-#### 7. Improve block semantics
+#### 7. Improve block semantics (`7-semantic-improvements`)
 This is shaping up to be a pretty useful callout or section block! Let's make the markup in our save function a bit more semantic.
 
-#### 8. Improve block style
+#### 8. Improve block style (`8-style-improvements`)
 Clean up the edit and style CSS (rather, Sass) to have less harsh initial colors, and apply a border to the header. Apply some CSS organizational practices and tweak the display of the edit view.
 
 I think we have a pretty useful block! Whether or not you made it this far in the workshop, this Github project will be online for you to test outlater. And, if you go beyond what I've done, feel free to submit a PR and I'll take a look!
