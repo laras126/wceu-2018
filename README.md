@@ -135,9 +135,17 @@ Let's use the same strategy to create an option for changing the block's backgro
 #### 6. Improvements to #1 (`6-editable-improvements`)
 As I was creating this exercise, I realized the initial `p` element we created would be better as a heading element. Then, we could use this block as a callout style block with a heading. We can also utilize the focus states Gutenebrg provides to make the editing experience more smooth. 
 
+#### 7. Improve block semantics
+This is shaping up to be a pretty useful callout or section block! Let's make the markup in our save function a bit more semantic.
+
+#### 8. Improve block style
+Clean up the edit and style CSS (rather, Sass) to have less harsh initial colors, and apply a border to the header. Apply some CSS organizational practices and tweak the display of the edit view.
+
+I think we have a pretty useful block! Whether or not you made it this far in the workshop, this Github project will be online for you to test outlater. And, if you go beyond what I've done, feel free to submit a PR and I'll take a look!
+
 ### Part 6: Conclusion (11:20)
 
-Individually, and in your own words, write 1-3 paragraphs explaining what a block is using the terms database, PHP, JavaScript, and React.
+Individually, and in your own words, write 1-3 paragraphs explaining the core components of a block.
 
 ### Debugging techniques:
 
@@ -154,4 +162,4 @@ Individually, and in your own words, write 1-3 paragraphs explaining what a bloc
 
 ### Helpful links:
 * [Creating a Global Options Component in Gutenberg](https://webdevstudios.com/2018/04/12/creating-a-global-options-component-in-gutenberg/), WebDevStudios
-* 
+* More here...
