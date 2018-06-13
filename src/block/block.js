@@ -110,7 +110,9 @@ registerBlockType('cgb/block-wceu-block', {
 					/>
 				</BlockControls>
 				{/* Note: Use <div> instead of <header> here to help distinguish the edit and save versions of the block + follow Gutenberg's existing markup patterns */}
-				<div className="wceu-header" style={{ textAlign: props.attributes.alignment }}>
+				<div className="wceu-header" style={{ 
+						textAlign: props.attributes.alignment, 
+						'border-color': props.attributes.borderColor }}>
 					<RichText
 						onChange={onChangeContentHeading}
 						value={props.attributes.contentHeading}
@@ -145,7 +147,7 @@ registerBlockType('cgb/block-wceu-block', {
 		return (
 			<section style={{ 'border-color': props.attributes.borderColor, 
 												'background-color': props.attributes.backgroundColor }}>
-				<header className={headerClassName}>
+				<header className={headerClassName} style={{ 'border-color': props.attributes.borderColor }}>
 					<h3>{props.attributes.contentHeading}</h3>
 					<p>{props.attributes.content}</p>
 				</header>
