@@ -118,22 +118,22 @@ Refer to [Debugging Techniques](#debugging-techniques) for more information, and
 <h4><label><input type="checkbox"/> <span><code>1-editable</code>: Make the text editable.</span></label></h4>
 Reference `src/block/block.js` on the branch `1-editable`. 
 
-<h4><label><input type="checkbox"/> <span><code>2-alignment-toolbar</code>: Add options for text alignment.</span></label></h3>
+<h4><label><input type="checkbox"/> <span><code>2-alignment-toolbar</code>: Add options for text alignment.</span></label></h4>
 Again reference `src/block/block.js`, as well as one of the `scss` files.
 
-<h3><label><input type="checkbox"/> <span><code>3-inner-blocks</code>: Add a nested blocks area.</span></label></h3>
+<h4><label><input type="checkbox"/> <span><code>3-inner-blocks</code>: Add a nested blocks area.</span></label></h4>
 We have the ability to have nested blocks, or "inner block" areas, in Gutenberg blocks. Perhaps we want to have an area for some free-form content below our editable, say an image or maybe a quote? Rather than writing those blocks ourselves, we can use the `InnerBlocks` component to allow for an area of nested blocks! Switch to the branch `3-inner-blocks` and figure out how to apply that code to your own block.
 
-<h4><label><input type="checkbox"/> <span><code>4-border-color-control</code>: Create an option for changing the border color.</span></label></h3>
+<h4><label><input type="checkbox"/> <span><code>4-border-color-control</code>: Create an option for changing the border color.</span></label></h4>
 For general block options, we can use the Inspector Controls component. This is the settings area that shows up in the sidebar, like that of the paragraph block. Switch to branch `4-border-color-control` to apply the functionality to your own block to modify the block's border color.
 
-<h4><label><input type="checkbox"/> <span><code>5-background-color-control</code>: Create an option for changing the background color.</span></label></h3>
+<h4><label><input type="checkbox"/> <span><code>5-background-color-control</code>: Create an option for changing the background color.</span></label></h4>
 Let's use the same strategy to create an option for changing the block's background color, and employ the contrast checker component to make sure our colors choices are readable.
 
-<h4><label><input type="checkbox"/> <span><code>6-editable-improvements-and-heading</code>: Improvements to our editable text, and add a heading.</span></label></h3>
+<h4><label><input type="checkbox"/> <span><code>6-editable-improvements-and-heading</code>: Improvements to our editable text, and add a heading.</span></label></h4>
 As I was creating this exercise, I realized the initial `p` element we created would be better as a heading element. Then, we could use this block as a callout style block with a heading. We can also utilize the focus states Gutenebrg provides to make the editing experience more smooth. 
 
-<h4><label><input type="checkbox"/> <span><code>7-semantic-improvements</code>: Improve block semantics</span></label></h3>
+<h4><label><input type="checkbox"/> <span><code>7-semantic-improvements</code>: Improve block semantics</span></label></h4>
 This is shaping up to be a pretty useful callout or section block! Let's make the markup in our save function a bit more semantic.
 
 <h4><label><input type="checkbox"/> <span><code>8-style-improvements</code>: Improve block style</span></label></h4>
@@ -159,5 +159,7 @@ Individually, and in your own words, write 1-3 paragraphs explaining the core co
 * Raise your hand and help will come!
 
 ## Helpful links:
+* [Learning Gutenberg Series on CSS-Tricks](https://css-tricks.com/guides/learning-gutenberg/) (by me and Andy Bell!)
+* [Zac Gordon's Course on Gutenberg](https://gutenberg.courses/)
 * [Creating a Global Options Component in Gutenberg](https://webdevstudios.com/2018/04/12/creating-a-global-options-component-in-gutenberg/), WebDevStudios
-* More here...
+* [Gutenberg Times](http://gutenbergtimes.com/) for Gutenberg news and other links
