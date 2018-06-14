@@ -16,7 +16,7 @@ Please have the following prepared for the workshop:
 * Node version 8+, npm version 5.3+
 * A text editor such as Sublime, VSCode, or Atom
 
-### Part 0: Introductions
+### Part 0: Introductions (start 10:15)
 
 1. <label><input type="checkbox"/> <span>Introduce yourselves to each other:</span></label>
     * Name
@@ -24,7 +24,7 @@ Please have the following prepared for the workshop:
     * A frustrating moment in development
 2. <label><input type="checkbox"/> <span>Decide who will drive first</span></label>
 
-### Part 1: Orientation (5-7 minutes)
+### Part 1: Orientation (start 10:25)
 
 1. <label><input type="checkbox"/> <span>Create a new post.</span></label>
 2. <label><input type="checkbox"/> <span>Open the Network panel in the console and observe the requests as you work.</span></label>
@@ -42,7 +42,7 @@ Debrief:
 * What did you see when you visited the request URL?
 * What are those HTML comments in the text view of the classic editor?
 
-### Part 2: Scaffold a block with Create Guten Block (10 minutes)
+### Part 2: Scaffold a block with Create Guten Block (start 10:35)
 
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
@@ -57,17 +57,17 @@ Debrief:
 9. If your node and npm versions are out of date: Join a different pair programming group with a working machine! Or, if you are comfortable doing so, try updating node/npm via [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/). You can also raise your hand for help!
 
 
-### Part 3: Our block files in `src/block` (10 minutes)
+### Part 3: Our block files in `src/block` (start 10:45)
 
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
 1. <label><input type="checkbox"/> <span>Make sure you have the compiler running in the command line (`npm start`).
 2. <label><input type="checkbox"/> <span>Open up blocks/block.js and read through the code comments.</span></label>
 3. Perform these changes to the code:
-    1. <label><input type="checkbox"/> <span>Change the name of your block, that is, the one that shows in the block selector</span></label>
-    2. <label><input type="checkbox"/> <span>Change the icon of your block (❤ [Dashicons](https://developer.wordpress.org/resource/dashicons/))</span></label>
-    3. <label><input type="checkbox"/> <span>Change the text that displays on the frontend i.e. when you “View Post”</span></label>
-    4. <label><input type="checkbox"/> <span>Change the text that displays on the backend i.e. editor view</span></label>
+    1. <label><input type="checkbox"/> <span>Change the title of your block, that is, the one that shows in the block selector</span></label>
+    2. <label><input type="checkbox"/> <span>Change the icon of your block (❤ [Dashicons](https://developer.wordpress.org/resource/dashicons/)!)</span></label>
+    3. <label><input type="checkbox"/> <span>Change the text in the block that displays on the frontend i.e. when you “View Post”</span></label>
+    4. <label><input type="checkbox"/> <span>Change the text in the block that displays on the backend i.e. editor view</span></label>
     5. <label><input type="checkbox"/> <span>Give the `edit` view a border of `10px solid skyblue`</span></label>
     6. <label><input type="checkbox"/> <span>Give the frontend view a border radius of 30px</span></label>
 4. To see changes, remember to save and reload the editor!
@@ -79,21 +79,18 @@ Debrief:
 * What is the difference between the `edit` and `save` view of a block?
 * What does the function `registerBlockType` do? (don't think too much about this one...)
 
-### Part 4: Finding Answers in Gutenberg's Source (10 minutes)
+Lecture: Anatomy of a block.
+
+### Part 4: Finding Answers in Gutenberg's Source (start 10:55)
 
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
 1. <label><input type="checkbox"/> <span>View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).</span></label>
-2. <label><input type="checkbox"/> <span>Find the location of the source code for core blocks</span></label>
-    * Answer: [this directory](https://github.com/WordPress/gutenberg/tree/master/core-blocks)
-3. <label><input type="checkbox"/> <span>Navigate to `index.js` of a block that you know has editable text, or choose one of these:</span></label>
+2. <label><input type="checkbox"/> <span>Navigate to the <code>core-blocks</code> directory.</span></label>
     * [Pre block (easiest)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js)
-    * [Heading block (medium)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/heading/index.js) 
-    * [Paragraph block (hardest)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js)
-4. <label><input type="checkbox"/> <span>Identify where the editable functionality is coming from in the `edit` portion of the block</span></label>
-    * Answer: [Pre block](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L69)
+3. <label><input type="checkbox"/> <span>Navigate to `index.js` of a block that you know has editable text, perhaps the Preformatted block, the Heading block, or the Verse block.</span></label>
+4. <label><input type="checkbox"/> <span>Identify where the editable functionality is coming from in the `edit` portion of the block.</span></label>
 5. <label><input type="checkbox"/> <span>Identify where that data is applied to the `save` markup of the block</span></label>
-    * Answer: [Pre block](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js#L84), [Paragraph](https://github.com/WordPress/gutenberg/blob/master/core-blocks/paragraph/index.js#L501)
 6. <label><input type="checkbox"/> <span>Review the file from top to bottom. Find another piece of code that is essential for making the block editable.</span></label>
     * HINT: it's very **import**ant
 
@@ -103,7 +100,7 @@ Debrief:
 * What was unexpected?
 * What do you have questions about?
 
-### Part 5: Building the Block (remainder of time)
+### Part 5: Building the Block (remainder of time - 11:00 start)
 
 The exercises are organized as branches in Github. Each branch's code contains an implementation of the feature, and your task is to figure out which changes you need to apply to your own block from the code in the branch. 
 
