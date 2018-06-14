@@ -2,12 +2,12 @@
 
 This Github project will provide the reference files and roadmap for our workshop today. Each portion will be introduced with a short lecture followed by an exercise.
 
-### Learning Goals:
+## Learning Goals:
 
 - To explain how a block works
 - To read through a block’s code and envision what is happening behind the scenes
 
-### Prerequisites:
+## Prerequisites:
 
 Please have the following prepared for the workshop:
 
@@ -16,7 +16,7 @@ Please have the following prepared for the workshop:
 * Node version 8+, npm version 5.3+
 * A text editor such as Sublime, VSCode, or Atom
 
-### Part 0: Introductions (start 10:15)
+## Part 0: Introductions (start 10:15)
 
 1. <label><input type="checkbox"/> <span>Introduce yourselves to each other:</span></label>
     * Name
@@ -24,7 +24,7 @@ Please have the following prepared for the workshop:
     * A frustrating moment in development
 2. <label><input type="checkbox"/> <span>Decide who will drive first</span></label>
 
-### Part 1: Orientation (start 10:25)
+## Part 1: Orientation (start 10:25)
 
 1. <label><input type="checkbox"/> <span>Create a new post.</span></label>
 2. <label><input type="checkbox"/> <span>Open the Network panel in the console and observe the requests as you work.</span></label>
@@ -42,7 +42,7 @@ Debrief:
 * What did you see when you visited the request URL?
 * What are those HTML comments in the text view of the classic editor?
 
-### Part 2: Scaffold a block with Create Guten Block (start 10:35)
+## Part 2: Scaffold a block with Create Guten Block (start 10:35)
 
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
@@ -57,7 +57,7 @@ Debrief:
 9. If your node and npm versions are out of date: Join a different pair programming group with a working machine! Or, if you are comfortable doing so, try updating node/npm via [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/). You can also raise your hand for help!
 
 
-### Part 3: Our block files in `src/block` (start 10:45)
+## Part 3: Our block files in `src/block` (start 10:45)
 
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
@@ -81,7 +81,7 @@ Debrief:
 
 Lecture: Anatomy of a block.
 
-### Part 4: Finding Answers in Gutenberg's Source (start 10:55)
+## Part 4: Finding Answers in Gutenberg's Source (start 10:55)
 
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
@@ -100,7 +100,7 @@ Debrief:
 * What was unexpected?
 * What do you have questions about?
 
-### Part 5: Building the Block (remainder of time - 11:00 start)
+## Part 5: Building the Block (remainder of time - 11:00 start)
 
 The exercises are organized as branches in Github. Each branch's code contains an implementation of the feature, and your task is to figure out which changes you need to apply to your own block from the code in the branch. 
 
@@ -140,11 +140,11 @@ Clean up the edit and style CSS (rather, Sass) to have less harsh initial colors
 
 And now...I think we have a pretty useful block! Whether or not you made it this far in the workshop, this Github project will be online for you to test at any time you like. And, if you go beyond what I've done, feel free to submit a PR and I'll take a look!
 
-### Part 6: Q&A + Conclusion (last 15 mins)
+## Part 6: Q&A + Conclusion (last 15 mins)
 
 Individually, and in your own words, write 1-3 paragraphs explaining the core components of a block.
 
-### Debugging techniques:
+## Debugging techniques:
 
 * Make sure the compiler is running and isn't showing syntax errors
 * Check the JavaScript console. If it shows an error:
@@ -157,6 +157,6 @@ Individually, and in your own words, write 1-3 paragraphs explaining the core co
 * Add a `console.log(props.attributes)` to your `edit` function. Does it output what is expected?
 * Raise your hand and help will come!
 
-### Helpful links:
+## Helpful links:
 * [Creating a Global Options Component in Gutenberg](https://webdevstudios.com/2018/04/12/creating-a-global-options-component-in-gutenberg/), WebDevStudios
 * More here...
