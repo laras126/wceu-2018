@@ -30,18 +30,17 @@ Please have the following prepared for the workshop:
 2. <label><input type="checkbox"/> <span>Open the Network panel in the console and observe the requests as you work.</span></label>
 2. <label><input type="checkbox"/> <span>Add a few blocks (one of them should be a paragraph block).</span></label> 
     * <label><input type="checkbox"/> <span>Adjust some settings for the paragraph block in the sidebar.</span></label>
-2. <label><input type="checkbox"/> <span>In the Network panel, select a request for either index.php or post.php and visit the route in the browser. What do you see?</span></label>
+2. <label><input type="checkbox"/> <span>In the Network panel, select a request for either index.php or post.php and visit the request URL in the browser (highlighted below). What do you see?</span></label>
 ![Network panel](images/network.png)
 5. <label><input type="checkbox"/> <span>Deactivate the Gutenberg plugin.</span></label>
 6. <label><input type="checkbox"/> <span>Reload the WYSIWYG editor and switch to the Text view. Make note of the comments surrounding blocks.</span></label>
 7. <label><input type="checkbox"/> <span>Reload the frontend and make note of any styling differences.</span></label>
-8. <label><input type="checkbox"/> <span>Activate Gutenberg plugin and see blocks re-appear.</span></label>
+8. <label><input type="checkbox"/> <span>Activate Gutenberg plugin, go back to the editor, and see blocks re-appear!</span></label>
 
 Debrief:
 
-* What conclusions can you draw about how Gutenberg works? 
-* Where are the HTML comments coming from?
-* How does Gutenberg apply styles to the frontend?
+* What did you see when you visited the request URL?
+* What are those HTML comments in the text view of the classic editor?
 
 ### Part 2: Scaffold a block with Create Guten Block (10 minutes)
 
