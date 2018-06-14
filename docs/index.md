@@ -27,10 +27,11 @@ Please have the following prepared for the workshop:
 ### Part 1: Orientation (5-7 minutes)
 
 1. <label><input type="checkbox"/> <span>Create a new post.</span></label>
+2. <label><input type="checkbox"/> <span>Open the Network panel in the console and observe the requests as you work.</span></label>
 2. <label><input type="checkbox"/> <span>Add a few blocks (one of them should be a paragraph block).</span></label> 
     * <label><input type="checkbox"/> <span>Adjust some settings for the paragraph block in the sidebar.</span></label>
-3. <label><input type="checkbox"/> <span>View the post from the frontend and use the Inspector to inspect the paragraph block.</span></label>
-4. <label><input type="checkbox"/> <span>Note where the styles are coming from e.g. inline? a theme stylesheet? plugin stylesheet?</span></label>
+2. <label><input type="checkbox"/> <span>In the Network panel, select a request for either index.php or post.php and visit the route in the browser. What do you see?</span></label>
+![Network panel](images/network.png)
 5. <label><input type="checkbox"/> <span>Deactivate the Gutenberg plugin.</span></label>
 6. <label><input type="checkbox"/> <span>Reload the WYSIWYG editor and switch to the Text view. Make note of the comments surrounding blocks.</span></label>
 7. <label><input type="checkbox"/> <span>Reload the frontend and make note of any styling differences.</span></label>

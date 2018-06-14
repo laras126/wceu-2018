@@ -21,8 +21,7 @@ input[type=checkbox] {
   
   & + span {
     &:hover {
-      background-color: whitesmoke; 
-      cursor: pointer;
+      background-color: whitesmoke;
     }
 
     &:active {
