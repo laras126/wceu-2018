@@ -2,16 +2,16 @@
 
 This Github project will provide the reference files and roadmap for our workshop today. Each portion will be introduced with a short lecture followed by an exercise.
 
-## Learning Goals:
+### Learning Goals:
 
 - To explain how a block works
 - To read through a block’s code and envision what is happening behind the scenes
 
-## Prerequisites:
+### Prerequisites:
 
 Please have the following prepared for the workshop:
 
-* Local install of WordPress with the Twenty Seventeen theme active
+* Local install of WordPress with a basic theme active (Twenty Seventeen is great)
 * Current version of the Gutenberg plugin installed (v3.0.1)
 * Node version 8+, npm version 5.3+
 * A text editor such as Sublime, VSCode, or Atom
@@ -25,6 +25,8 @@ Please have the following prepared for the workshop:
 2. <label><input type="checkbox"/> <span>Decide who will drive first</span></label>
 
 ## Part 1: Orientation (start 10:25)
+
+Lecture: SPA
 
 1. <label><input type="checkbox"/> <span>Create a new post.</span></label>
 2. <label><input type="checkbox"/> <span>Open the Network panel in the console and observe the requests as you work.</span></label>
@@ -86,8 +88,7 @@ Lecture: Anatomy of a block.
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
 1. <label><input type="checkbox"/> <span>View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).</span></label>
-2. <label><input type="checkbox"/> <span>Navigate to the <code>core-blocks</code> directory.</span></label>
-    * [Pre block (easiest)](https://github.com/WordPress/gutenberg/blob/master/core-blocks/preformatted/index.js)
+2. <label><input type="checkbox"/> <span>Navigate to the <code>core-blocks</code> directory in Gutenberg's Github repository.</span></label>
 3. <label><input type="checkbox"/> <span>Navigate to `index.js` of a block that you know has editable text, perhaps the Preformatted block, the Heading block, or the Verse block.</span></label>
 4. <label><input type="checkbox"/> <span>Identify where the editable functionality is coming from in the `edit` portion of the block.</span></label>
 5. <label><input type="checkbox"/> <span>Identify where that data is applied to the `save` markup of the block</span></label>
@@ -100,7 +101,7 @@ Debrief:
 * What was unexpected?
 * What do you have questions about?
 
-## Part 5: Building the Block (remainder of time - 11:00 start)
+## Part 5: Building the Block (remainder of time - 11:05 start)
 
 The exercises are organized as branches in Github. Each branch's code contains an implementation of the feature, and your task is to figure out which changes you need to apply to your own block from the code in the branch. 
 
