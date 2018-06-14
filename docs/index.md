@@ -59,21 +59,21 @@ Debrief:
 9. If your node and npm versions are out of date: Join a different pair programming group with a working machine! Or, if you are comfortable doing so, try updating node/npm via [this blog post](https://solarianprogrammer.com/2016/04/29/how-to-upgrade-nodejs-mac-os-x/). You can also raise your hand for help!
 
 
-## Part 3: Our block files in `src/block` (start 10:45)
+## Part 3: Our block files (start 10:45)
 
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
-1. <label><input type="checkbox"/> <span>Make sure you have the compiler running in the command line (`npm start`).
-2. <label><input type="checkbox"/> <span>Open up blocks/block.js and read through the code comments.</span></label>
+1. <label><input type="checkbox"/> <span>Make sure you have the compiler running in the command line (<code>npm start</code>).</span></label>
+2. <label><input type="checkbox"/> <span>Open up <code>src/block/block.js</code> and read through the code comments.</span></label>
 3. Perform these changes to the code:
     1. <label><input type="checkbox"/> <span>Change the title of your block, that is, the one that shows in the block selector</span></label>
     2. <label><input type="checkbox"/> <span>Change the icon of your block (❤ [Dashicons](https://developer.wordpress.org/resource/dashicons/)!)</span></label>
     3. <label><input type="checkbox"/> <span>Change the text in the block that displays on the frontend i.e. when you “View Post”</span></label>
     4. <label><input type="checkbox"/> <span>Change the text in the block that displays on the backend i.e. editor view</span></label>
-    5. <label><input type="checkbox"/> <span>Give the `edit` view a border of `10px solid skyblue`</span></label>
+    5. <label><input type="checkbox"/> <span>Give the `edit` view a border of `10px solid skyblue` (hint: it's not in <code>block.js</code>)</span></label>
     6. <label><input type="checkbox"/> <span>Give the frontend view a border radius of 30px</span></label>
 4. To see changes, remember to save and reload the editor!
-5. <label><input type="checkbox"/> <span>Bonus: Find how our JavaScript is being enqueued</span></label>
+5. <label><input type="checkbox"/> <span>Bonus: Find how where the JavaScript and stylsheets are enqueued</span></label>
 
 Debrief:
 
@@ -105,21 +105,15 @@ Debrief:
 
 The exercises are organized as branches in Github. Each branch's code contains an implementation of the feature, and your task is to figure out which changes you need to apply to your own block from the code in the branch. 
 
-**[Start here](https://github.com/laras126/wceu-2018/blob/1-editable/src/block/block.js)** for the first challenge, then change branches using the dropdown on the left below the project menu as you move to each exercise. It looks like this:
+**[Start here](https://github.com/laras126/wceu-2018/blob/1-editable/src/block/block.js)** for the first challenge, then change branches using the dropdown on the left below the project menu as you move to each exercise. Note that I have removed most of the comments on each branch's example code for legibility. You do not have to do this, but you can! 
 
-![Image of where to change branches in the Github UI](images/Github-branches.png)
-
-Note that I have removed most of the comments on each branch's example code for legibility. You do not have to do this, but you can! Also, remember, that you will see a lot of this:
-
-![Image of an error on the block](images/block-error.png)
-
-Refer to [Debugging Techniques](#debugging-techniques) for more information, and raise your hand if you get stuck!
+Remeber also to delete and recreate blocks that show the "This block appears to have been modified externally" error. Refer to [Debugging Techniques](#debugging-techniques) below for more information, and most importantly, raise your hand if you get stuck!
 
 <h4><label><input type="checkbox"/> <span><code>1-editable</code>: Make the text editable.</span></label></h4>
 Reference `src/block/block.js` on the branch `1-editable`. 
 
 <h4><label><input type="checkbox"/> <span><code>2-alignment-toolbar</code>: Add options for text alignment.</span></label></h4>
-Again reference `src/block/block.js`, as well as one of the `scss` files.
+Switch to the branch <code>2-alignment-toolbar</code> and reference `src/block/block.js`, as well as one of the `scss` files.
 
 <h4><label><input type="checkbox"/> <span><code>3-inner-blocks</code>: Add a nested blocks area.</span></label></h4>
 We have the ability to have nested blocks, or "inner block" areas, in Gutenberg blocks. Perhaps we want to have an area for some free-form content below our editable, say an image or maybe a quote? Rather than writing those blocks ourselves, we can use the `InnerBlocks` component to allow for an area of nested blocks! Switch to the branch `3-inner-blocks` and figure out how to apply that code to your own block.
