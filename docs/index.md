@@ -133,7 +133,7 @@ This is shaping up to be a pretty useful callout or section block! Let's make th
 <h4><label><input type="checkbox"/> <span><code>8-style-improvements</code>: Improve block style</span></label></h4>
 Clean up the edit and style CSS (rather, Sass) to have less harsh initial colors, and apply a border to the header. Apply some CSS organizational practices and tweak the display of the edit view.
 
-And now...I think we have a pretty useful block! Whether or not you made it this far in the workshop, this Github project will be online for you to test at any time you like. And, if you go beyond what I've done, feel free to submit a PR and I'll take a look!
+And now...I think we have a pretty useful block! Whether or not you made it this far in the workshop, this Github project will be online for you to reference at any time you like. And, if you go beyond what I've done, feel free to submit a Pull Request and I'll take a look!
 
 ## Part 6: Q&A + Conclusion (last 15 mins)
 
@@ -143,6 +143,7 @@ Individually, and in your own words, write 1-3 paragraphs explaining the core co
 
 * Make sure the compiler is running and isn't showing syntax errors
 * Check the JavaScript console. If it shows an error:
+    1. Read the error
     1. Delete your block
     2. Update the post
     3. Refresh the editor page (command + R)
