@@ -158,6 +158,7 @@ Individually, and in your own words, write 1-3 paragraphs explaining the core co
 * Raise your hand and help will come!
 
 ## Helpful links:
+* [Slides for this workshop](https://www.slideshare.net/laras126/lets-build-a-gutenberg-block-wordcamp-europe-2018)
 * [Learning Gutenberg Series on CSS-Tricks](https://css-tricks.com/guides/learning-gutenberg/) (by me and Andy Bell!)
 * [Zac Gordon's Course on Gutenberg](https://gutenberg.courses/)
 * [Creating a Global Options Component in Gutenberg](https://webdevstudios.com/2018/04/12/creating-a-global-options-component-in-gutenberg/), WebDevStudios
