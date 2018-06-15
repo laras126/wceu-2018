@@ -46,6 +46,8 @@ Debrief:
 
 ## Part 2: Scaffold a block with Create Guten Block (start 10:35)
 
+Lecture: Modern JavaScript Workflow
+
 <label><input type="checkbox"/> <span>Switch drivers!</span></label>
 
 1. <label><input type="checkbox"/> <span>Open the terminal (On Mac: Applications > Utilities > Terminal).</span></label>
@@ -89,7 +91,7 @@ Lecture: Anatomy of a block.
 
 1. <label><input type="checkbox"/> <span>View the source of Gutenberg [on Github here](https://github.com/WordPress/gutenberg).</span></label>
 2. <label><input type="checkbox"/> <span>Navigate to the <code>core-blocks</code> directory in Gutenberg's Github repository.</span></label>
-3. <label><input type="checkbox"/> <span>Navigate to `index.js` of a block that you know has editable text, perhaps the Preformatted block, the Heading block, or the Verse block.</span></label>
+3. <label><input type="checkbox"/> <span>Navigate to `index.js` of a block that you know has editable text, perhaps the Quote block, the Preformatted block, or the Verse block.</span></label>
 4. <label><input type="checkbox"/> <span>Identify where the editable functionality is coming from in the `edit` portion of the block.</span></label>
 5. <label><input type="checkbox"/> <span>Identify where that data is applied to the `save` markup of the block</span></label>
 6. <label><input type="checkbox"/> <span>Review the file from top to bottom. Find another piece of code that is essential for making the block editable.</span></label>
@@ -102,6 +104,8 @@ Debrief:
 * What do you have questions about?
 
 ## Part 5: Building the Block (remainder of time - 11:05 start)
+
+Lecture: Block Attributes
 
 The exercises are organized as branches in Github. Each branch's code contains an implementation of the feature, and your task is to figure out which changes you need to apply to your own block from the code in the branch. 
 
