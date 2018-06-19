@@ -54,7 +54,7 @@ Lecture: Modern JavaScript Workflow
 2. <label><input type="checkbox"/> <span>Type `node -v` and press Enter. If you get a response of `v8.0.0` or greater, proceed to step 3. Otherwise, skip to step 9.</span></label>
 3. <label><input type="checkbox"/> <span>Type `npm -v` and press Enter. If you get a response of `v5.3.0` or greater, proceed to step 4. Otherwise, skip to step 9.</span></label>
 4. <label><input type="checkbox"/> <span>`cd` into the plugins directory of your local install (e.g. `cd ~/Sites/wceu-test/wp-content/plugins`)</span></label>
-5. <label><input type="checkbox"/> <span>Run the command `npx create-guten-block wceu-2018` and watch as your block is created!</span></label> 
+5. <label><input type="checkbox"/> <span>Run the command `npx create-guten-block wceu-2018` and watch as your block is created with [Create Guten Block by Ahmad Awais](https://github.com/ahmadawais/create-guten-block)!</span></label> 
 6. <label><input type="checkbox"/> <span>Navigate to the plugins screen of your local install and activate your new block</span></label>
 7. <label><input type="checkbox"/> <span>Navigate to a post editor and add the new block</span></label>
 8. <label><input type="checkbox"/> <span>Save and view it from the frontend</span></label>
@@ -160,6 +160,7 @@ Individually, and in your own words, write 1-3 paragraphs explaining the core co
 ## Helpful links:
 * [Slides for this workshop](https://www.slideshare.net/laras126/lets-build-a-gutenberg-block-wordcamp-europe-2018)
 * [Learning Gutenberg Series on CSS-Tricks](https://css-tricks.com/guides/learning-gutenberg/) (by me and Andy Bell!)
+* [Create Guten Block on Github](https://github.com/ahmadawais/create-guten-block) 
 * [Zac Gordon's Course on Gutenberg](https://gutenberg.courses/)
 * [Creating a Global Options Component in Gutenberg](https://webdevstudios.com/2018/04/12/creating-a-global-options-component-in-gutenberg/), WebDevStudios
 * [Gutenberg Times](http://gutenbergtimes.com/) for Gutenberg news and other links
